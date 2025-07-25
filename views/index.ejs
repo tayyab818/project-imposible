@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Hub - Computer Science Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #3b82f6; }
+            to { box-shadow: 0 0 30px #1d4ed8, 0 0 40px #1d4ed8; }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            Learning Hub
+                        </h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/home" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                            Home
+                        </a>
+                        <a href="/teacher" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                            Teachers
+                        </a>
+                        <a href="/lectures" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                            Lectures
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-float">
+                    Master Computer Science
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    Explore the fascinating world of computing with our comprehensive courses
+                </p>
+                <a href="/lectures" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 animate-glow">
+                    Start Learning Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Computer Science Subjects -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Computer Science Subjects
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Comprehensive courses designed to build your expertise
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Fundamentals -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Programming Fundamentals</h3>
+                    <p class="text-gray-700 mb-6">
+                        Master the basics of programming with languages like Python, Java, and C++. Learn syntax, logic, and problem-solving techniques that form the foundation of all software development.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">Java</span>
+                        <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm">C++</span>
+                    </div>
+                </div>
+
+                <!-- Data Structures & Algorithms -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Data Structures & Algorithms</h3>
+                    <p class="text-gray-700 mb-6">
+                        Dive deep into efficient data organization and algorithmic thinking. Study arrays, linked lists, trees, graphs, sorting, and searching algorithms essential for technical interviews.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Arrays</span>
+                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Trees</span>
+                        <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">Graphs</span>
+                    </div>
+                </div>
+
+                <!-- Database Systems -->
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"/>
+                            <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"/>
+                            <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Database Systems</h3>
+                    <p class="text-gray-700 mb-6">
+                        Learn to design, implement, and manage databases. Cover SQL, NoSQL, database design principles, normalization, and modern database technologies used in real-world applications.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm">Design</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-100 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Development</h3>
+                    <p class="text-gray-700 mb-6">
+                        Build modern, responsive websites and web applications. Master HTML, CSS, JavaScript, and popular frameworks like React, Node.js, and Express to create full-stack applications.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                        <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm">React</span>
+                    </div>
+                </div>
+
+                <!-- Artificial Intelligence -->
+                <div class="bg-gradient-to-br from-pink-50 to-rose-100 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-pink-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Artificial Intelligence</h3>
+                    <p class="text-gray-700 mb-6">
+                        Explore the cutting-edge field of AI and machine learning. Study neural networks, deep learning, natural language processing, and computer vision to build intelligent systems.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                        <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm">Neural Networks</span>
+                        <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm">NLP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Start Your Journey?
+            </h2>
+            <p class="text-xl mb-8 text-gray-300">
+                Join thousands of students who have transformed their careers with our courses
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transform hover:scale-105 transition-all duration-300">
+                    Browse Courses
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transform hover:scale-105 transition-all duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Learning Hub
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Empowering the next generation of computer scientists with comprehensive education and hands-on experience.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#teachers" class="text-gray-400 hover:text-white transition-colors">Teachers</a></li>
+                        <li><a href="#lectures" class="text-gray-400 hover:text-white transition-colors">Lectures</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Information</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-gray-300">034456732</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-gray-300">learninghub0@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 Learning Hub. All rights reserved. Designed with ❤️ for aspiring computer scientists.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
